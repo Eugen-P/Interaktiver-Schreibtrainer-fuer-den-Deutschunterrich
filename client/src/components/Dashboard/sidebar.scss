@@ -1,0 +1,153 @@
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background-color: #f4f4f4;
+  position: fixed;
+  top: 0;
+  left: -251px;
+  overflow-y: auto;
+  border-right: 1px solid #00000077;
+  transition: left ease-in-out .2s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .sidebarHeader {
+    transition: left ease-in-out .2s;
+    background-color: #f4f4f4;
+    max-width: 250px;
+    border-right: 1px solid #00000077;
+    height: 10%;
+    position: fixed;
+    top: 0;
+    left: -251px;
+    
+    .headerSlide {
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 15px;
+      align-items: center;
+      border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+    }
+
+    .input-tab {
+      padding: 20px 10px;
+      position: relative;
+      border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+
+      .add-tab {
+        display: flex;
+        align-items: center;
+
+        & input {
+          margin-right: 10px;
+        }
+      }
+
+      .validation-error {
+        left: 12px;
+        font-size: 12px;
+        color: #ff0000;
+        position: absolute;
+        bottom: 5px;
+      }
+    }
+  }
+
+  input {
+    width: 203px;
+  }
+}
+
+svg {
+  transition: all ease-in-out .2s;
+  fill:  rgba(0, 0, 0, 0.689);
+  
+  &.svgDelete {
+    fill:  rgba(0, 0, 0, 0.5);
+  }
+
+  &.svgEdit {
+    stroke: rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      stroke: #335eea;
+    }
+  }
+
+  &:hover {
+    fill: #335eea;
+  }
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+}
+
+.tab-list {
+  list-style: none;
+  padding: 0 ;
+  overflow-y: scroll ;
+  height: 100%;
+  margin-top: 112px;
+  bottom: 0;
+  left: 0;
+
+  .liDiv {
+    position: relative;
+    
+    .liButton{
+      border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+      padding: 20px 10px;
+      cursor: pointer;
+      border-radius: 0;
+      background-color: #f4f4f4;
+      width: 100%;
+      outline: none;
+
+      &.active {
+        background-color: #335eea1f;
+      }
+
+      li {
+    
+        p {
+          margin: 5px 0 10px;
+          font-weight: 700;
+          color: #000;
+          text-align: left;
+        }
+      }
+    }
+    
+
+    .buttonDiv {
+      position: absolute;
+      bottom: 28px;
+      right:6px;
+      z-index: 1;
+      display: flex;
+      justify-content: end;
+      outline: none;
+
+      .inputChangeName {
+        margin-right: auto;
+      }
+    }
+  }
+
+  .add-tab {
+    padding: 25px 7px 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+}
+
+    
+  
+  
